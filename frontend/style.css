@@ -1,12 +1,75 @@
-body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
+#logo{
+    border-bottom: 2px solid rgb(78, 78, 78);
+    display:inline-block;
+    padding-bottom: 10px;
 }
 
-#tasks-list {
-    margin-top: 20px;
+#input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    
 }
+input {
+    width: 300px;
+    height: 25px;
+    font-size: 20px;
+    padding: 8px;
+    border: 2px solid #aaa;
+    border-radius: 8px;
+    margin-right: 10px;
 
-button {
-    margin-top: 20px;
+  }
+  
+  #add {
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  #add:hover {
+    background-color: #3367d6;
+  }
+  #sections{
+    display: flex;
+    justify-content: center;
+  }
+  section{
+    min-width: 33%;
+    min-height: 70%;
+    border: 2px solid black;
+  }
+  h2{
+    text-align: center;
+    border-bottom: 2px solid black;
+  }
+  .tasks-list{
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+.complete-button{
+    width: 30px;
+    height: 20px;
+    font-size: 10px;
+    background-color: #59ed3f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.delete-button{
+    width: 30px;
+    height: 20px;
+    font-size: 10px;
+    background-color: #fd6c5c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
 }

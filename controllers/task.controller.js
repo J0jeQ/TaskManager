@@ -61,9 +61,30 @@ async function createTask(req, res) {
   }
 }
 
+async function updateTask(req, res) {
+  try {
+    await connectDB();
+    const updatedTask = await Task.findByIdAndUpdate(
+      req.params.id,
+      { $set: req.body },  
+      { new: true }        
+    );
+
+    if (!updatedTask) {
+      return res.status(404).send("Nie znaleziono zadania do aktualizacji");
+    }
+
+    res.status(200).json(updatedTask);
+  } catch (err) {
+    res.status(500).send(err.message);
+  } finally {
+    disconnectDB();
+  }
+}
 module.exports = {
   getAllTasks,
   getTaskById,
   deleteTask,
-  createTask
+  createTask,
+  updateTask
 };
